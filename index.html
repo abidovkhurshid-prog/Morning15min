@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-title" content="Morning 15">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <title>Morning 15 Calisthenics</title>
 </head>
 <body>
@@ -17,9 +17,9 @@
   <div class="topbar"><div class="brand">MORNING 15</div><div class="pill">CALISTHENICS</div></div>
   <section class="hero">
     <div class="eyebrow">8 НЕДЕЛЬ • 15 МИНУТ</div>
-    <h1>Сильнее каждое утро</h1>
-    <p>Прогрессивная программа без оборудования. Реальные демонстрации упражнений, автоматический таймер и постепенное увеличение нагрузки.</p>
-    <div class="stats"><div class="stat"><b id="totalDone">0</b><span>тренировок</span></div><div class="stat"><b id="level">База</b><span>уровень</span></div><div class="stat"><b>15:00</b><span>каждый день</span></div></div>
+    <h1>Calisthenics + Chair</h1>
+    <p>Три дня классической калистеники, два дня со стулом, день мобильности и день восстановления. Без инвентаря, кроме устойчивого стула в chair-дни.</p>
+    <div class="stats"><div class="stat"><b id="totalDone">0</b><span>тренировок</span></div><div class="stat"><b id="level">База</b><span>уровень</span></div><div class="stat"><b>15:00</b><span>каждая сессия</span></div></div>
   </section>
   <div class="sectionHead"><b>Неделя программы</b><span>1 → 8</span></div>
   <div class="weekTabs" id="weekTabs"></div>
@@ -27,8 +27,9 @@
   <div class="days" id="days"></div>
   <section class="plan">
     <div class="planTop"><div><div class="planName" id="planName"></div><div class="planMeta" id="planMeta"></div></div><button class="start" id="startBtn">СТАРТ</button></div>
+    <div class="equipment" id="equipment"></div>
     <div class="list" id="list"></div>
-    <div class="note">Интенсивность растёт за счёт соотношения работа/отдых: 30/30 → 35/25 → 40/20 → 45/15. Если упражнение вызывает боль, головокружение или необычную одышку, тренировку лучше остановить.</div>
+    <div class="note">В chair-дни используй только устойчивый стул без колёс, лучше поставленный спинкой к стене. Остановись при боли, головокружении или необычной одышке.</div>
   </section>
 </main>
 <section class="player" id="player">
@@ -37,6 +38,7 @@
       <img id="demo" src="" alt="">
       <button class="circleBtn sound" id="soundBtn">🔊</button>
       <button class="circleBtn close" id="closeBtn">×</button>
+      <div class="muscleBadge" id="muscleBadge"></div>
       <div class="restLabel"><div><b>ОТДЫХ</b><span id="restName"></span></div></div>
       <div class="cue" id="cue"></div>
     </div>
@@ -44,6 +46,11 @@
       <div class="progress" id="progress"></div>
       <div class="exerciseTitle" id="exerciseTitle"></div>
       <div class="phase" id="phase"></div>
+      <div class="tempoBox" id="tempoBox">
+        <div class="tempoTop"><span>РИТМ</span><b id="tempoText">2 • 1 • 2</b><em id="repHint"></em></div>
+        <div class="tempoTrack"><i id="tempoDot"></i></div>
+        <div class="tempoLabels"><span id="tempoA">ВНИЗ</span><span id="tempoB">ПАУЗА</span><span id="tempoC">ВВЕРХ</span></div>
+      </div>
       <div class="metrics">
         <div class="metric"><b id="elapsed">00:00</b><span>прошло</span></div>
         <div class="metric main"><b id="remain">00:30</b><span>осталось</span></div>
@@ -55,7 +62,7 @@
     </div>
   </div>
 </section>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 <script src="music.js?v=1"></script>
 </body>
 </html>
